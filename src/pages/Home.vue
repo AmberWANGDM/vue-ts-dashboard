@@ -1,17 +1,23 @@
 <template>
-  <div class="x">home</div>
+  <div class="home">
+    <header :style="{ 'background-image': `url(${headerBg})` }">home</header>
+  </div>
+
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { } from 'vue'
+import headerBg from '../images/header.png'
+// console.log(image); // /src/images/header.png
 </script>
 
 <style lang="scss" scoped>
 @import './../shared/helper';
 
-.x {
-  width: rem(367);
-  height: rem(345);
-  border: 1px solid red;
+.home {
+  &>header {
+    height: rem(99);
+    background-size: cover;
+  }
 }
 </style>
