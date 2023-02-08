@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>我的大屏可视化项目</title>
+  <script>
+    // 1. 获取浏览器可见区域宽高
+    const clientWidth = document.documentElement.clientWidth
+    const clientHeight = document.documentElement.clientHeight
+    // 2. 计算显示屏宽高
+    let pageWidth
+    if (clientWidth / clientHeight > 16 / 9) {
+      pageWidth = clientHeight * 16 / 9
+    } else {
+      pageWidth = clientWidth
+    }
+    // 3. 将 1rem 设置为 屏幕宽的 一百分之一
+    const string = `<style>
+        html{
+          font-size: ${pageWidth / 100}px
+        }
+      </style>`
+    document.write(string)
+    const pageHeight = pageWidth * 9 / 16
+  </script>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script>
+    app.style.backgroundColor = 'yellowgreen'
+    app.style.width = pageWidth + 'px'
+    app.style.height = pageHeight + 'px'
+    app.style.marginTop = (clientHeight - pageHeight) / 2 + 'px'
+  </script>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
