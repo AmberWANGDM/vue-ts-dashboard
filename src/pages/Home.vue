@@ -24,6 +24,7 @@ import headerBg from '../images/header.png'
   display: flex;
   flex-direction: column;
   flex: 1;
+  background: #010310;
 
   header {
     height: rem(99);
@@ -39,29 +40,49 @@ import headerBg from '../images/header.png'
     grid-column-gap: rem(28);
     grid-row-gap: rem(28);
 
+    >section {
+      border: 1px solid #0764bc;
+      position: relative;
+      border-radius: 4px;
+      box-shadow: 0 0 2px 0 #0e325f, inset 0 0 2px 0 #0e325f;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 4px;
+        box-shadow: 17px 0 0 -16px #0e325f,
+          -17px 0 0 -16px #0e325f,
+          0 17px 0 -16px #0e325f,
+          0 -17px 0 -16px #0e325f,
+          9px 0 0 -8px #0d4483,
+          -9px 0 0 -8px #0d4483,
+          0 9px 0 -8px #0d4483,
+          0 -9px 0 -8px #0d4483, ;
+      }
+    }
+
     >.section1 {
       grid-area: box1;
-      background-color: red;
     }
 
     >.section2 {
       grid-area: box2;
-      background-color: lightyellow;
     }
 
     >.section3 {
       grid-area: box3;
-      background-color: lightblue;
     }
 
     >.section4 {
       grid-area: box4;
-      background-color: lightpink;
     }
 
     >.section5 {
       grid-area: box5;
-      background-color: coral;
     }
   }
 }
