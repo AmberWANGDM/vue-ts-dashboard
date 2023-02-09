@@ -1,5 +1,6 @@
-@function rem($n) {
-  @return $n/2420 * 100rem;
+@use 'sass:math';
+@function px($n) {
+  @return math.div($n, 2420) * 100rem;
 }
 $blue: #002866;
 $font-hei: -apple-system, 'Noto Sans', 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial, 'Liberation Sans',

@@ -25,11 +25,17 @@ code {
 body {
   font-family: $font-hei;
   font-size: 16px;
-  // display: flex;
-  // justify-content: center;
 }
 #app {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 16px;
 }
