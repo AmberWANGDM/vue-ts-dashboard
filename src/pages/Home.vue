@@ -6,7 +6,9 @@
         <Chart1 />
         <Chart2 />
       </section>
-      <section className="bordered section2"></section>
+      <section className="bordered section2">
+        <Chart3 />
+      </section>
       <section className="bordered section3"></section>
       <section className="bordered section4"></section>
       <section className="bordered section5"></section>
@@ -19,6 +21,7 @@
 <script setup lang="ts">
 import Chart1 from '../components/Chart1.vue'
 import Chart2 from '../components/Chart2.vue'
+import Chart3 from '../components/Chart3.vue'
 import headerBg from '../assets/img/header.png'
 const year = new Date().getFullYear();
 </script>
