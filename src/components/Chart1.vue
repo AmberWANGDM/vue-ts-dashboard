@@ -8,18 +8,13 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import * as echarts from 'echarts';
+import { px } from '../shared/px';
+import { createEchartsOptions } from '../shared/create-echarts-options';
 const divRef = ref(null)
-const px = (n: number) => n / 2420 * (window as any).pageWidth;
 onMounted(() => {
   if (!divRef.value) return
   var myChart = echarts.init(divRef.value);
-  myChart.setOption({
-    textStyle: {
-      fontSize: px(12),
-      color: '#79839E'
-    },
-    title: { show: false },
-    legend: { show: false },
+  myChart.setOption(createEchartsOptions({
     xAxis: {
       data: ['兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区'],
       axisTick: { show: false },
@@ -39,12 +34,6 @@ onMounted(() => {
         }
       },
     },
-    grid: {
-      x: px(40),
-      y: px(40),
-      x2: px(40),
-      y2: px(40),
-    },
     yAxis: {
       splitLine: { show: false },
       axisLine: {
@@ -59,7 +48,7 @@ onMounted(() => {
       type: 'bar',
       data: [10, 20, 36, 41, 15, 26, 37, 18, 29]
     }]
-  });
+  }));
 })
 </script>
 

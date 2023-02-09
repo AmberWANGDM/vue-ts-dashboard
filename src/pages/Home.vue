@@ -4,6 +4,7 @@
     <main>
       <section class=" section1">
         <Chart1 />
+        <Chart2 />
       </section>
       <section className="bordered section2"></section>
       <section className="bordered section3"></section>
@@ -16,6 +17,7 @@
 
 <script setup lang="ts">
 import Chart1 from '../components/Chart1.vue'
+import Chart2 from '../components/Chart2.vue'
 import headerBg from '../assets/img/header.png'
 
 </script>
