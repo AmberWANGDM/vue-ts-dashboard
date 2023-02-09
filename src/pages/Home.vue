@@ -11,6 +11,7 @@
       <section className="bordered section4"></section>
       <section className="bordered section5"></section>
     </main>
+    <footer>&copy; danmeng 2023-{{ year }}</footer>
   </div>
 
 </template>
@@ -19,7 +20,7 @@
 import Chart1 from '../components/Chart1.vue'
 import Chart2 from '../components/Chart2.vue'
 import headerBg from '../assets/img/header.png'
-
+const year = new Date().getFullYear();
 </script>
 
 <style lang="scss" scoped>
