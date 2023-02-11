@@ -13,7 +13,9 @@
       <section className="bordered section3">
         <Chart5 />
       </section>
-      <section className="bordered section4"></section>
+      <section className="bordered section4">
+        <Chart6 />
+      </section>
       <section className="bordered section5"></section>
     </main>
     <footer>&copy; danmeng 2023-{{ year }}</footer>
@@ -27,6 +29,8 @@ import Chart2 from '../components/Chart2.vue'
 import Chart3 from '../components/Chart3.vue'
 import Chart4 from '../components/Chart4.vue'
 import Chart5 from '../components/Chart5.vue'
+import Chart6 from '../components/Chart6.vue'
+
 import headerBg from '../assets/img/header.png'
 const year = new Date().getFullYear();
 </script>
